@@ -1,0 +1,15 @@
+---
+applications:
+
+  - name: nexWebProject
+
+    memory: 4000M
+    timeout: 300
+    random-route: true
+    path: target/nexWebProject-1.0.0.war
+    buildpacks:
+      - sap_java_buildpack
+    env:
+      TARGET_RUNTIME: tomee7
+      SET_LOGGING_LEVEL: '{ROOT: INFO, egovframework:DEBUG, com.sap.cloud.sdk: ERROR}'
+      JBP_CONFIG_SAPJVM_MEMORY_SIZES: 'metaspace:128m..'
