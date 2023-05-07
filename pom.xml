@@ -181,10 +181,22 @@
 			<version>3.5</version>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>org.hsqldb</groupId>-->
+<!--			<artifactId>hsqldb</artifactId>-->
+<!--			<version>2.7.1</version>-->
+<!--		</dependency>-->
+
 		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>2.7.1</version>
+			<groupId>com.sap.cloud.db.jdbc</groupId>
+			<artifactId>ngdbc</artifactId>
+			<version>2.3.62</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sap.hana.cloud</groupId>
+			<artifactId>spring-cloud-cloudfoundry-hana-service-connector</artifactId>
+			<version>1.0.4.RELEASE</version>
 		</dependency>
 
         <!-- mysql이나 oracle DB 사용시 아래 설정 추가  
@@ -261,11 +273,11 @@
 					</components>
 				</configuration>
 				<dependencies>
-					<dependency>
-						<groupId>org.hsqldb</groupId>
-						<artifactId>hsqldb</artifactId>
-						<version>2.3.2</version>
-					</dependency>
+<!--					<dependency>-->
+<!--						<groupId>org.hsqldb</groupId>-->
+<!--						<artifactId>hsqldb</artifactId>-->
+<!--						<version>2.3.2</version>-->
+<!--					</dependency>-->
 				</dependencies>
 			</plugin>
 			<!-- EMMA -->

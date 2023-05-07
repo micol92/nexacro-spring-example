@@ -10,8 +10,10 @@
         
   <bean id="applicationContextProvider" class="com.nexacro.uiadapter17.spring.core.context.ApplicationContextProvider" lazy-init="false" />
 
+    <bean id="hanaDbms"   class="com.nexacro.uiadapter17.spring.dao.dbms.Hana" />
+
+<!--
   <bean id="hsqlDbms"   class="com.nexacro.uiadapter17.spring.dao.dbms.Hsql" />
-<!-- 
   <bean id="oracleDbms" class="com.nexacro.uiadapter17.spring.dao.dbms.Oracle" />
   <bean id="mssqlDbms"  class="com.nexacro.uiadapter17.spring.dao.dbms.Mssql" />
   <bean id="mysqlDbms"  class="com.nexacro.uiadapter17.spring.dao.dbms.Mysql" />
@@ -20,8 +22,10 @@
   <bean id="dbmsProvider" class="com.nexacro.uiadapter17.spring.dao.DbVendorsProvider">
       <property name="dbvendors">
           <map>
+              <entry key="SAP HANA Database Engine" value-ref="hanaDbms"/>
+
+              <!--
            <entry key="HSQL Database Engine" value-ref="hsqlDbms"/>
-<!-- 
            <entry key="Oracle"     value-ref="oracleDbms"/>
            <entry key="SQL Server" value-ref="mssqlDbms"/>
            <entry key="MySQL"      value-ref="mysqlDbms"/>

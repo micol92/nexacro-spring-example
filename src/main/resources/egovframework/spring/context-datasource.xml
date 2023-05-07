@@ -5,9 +5,9 @@
         http://www.springframework.org/schema/jdbc  http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd">
 	
 	<!-- 테스트 실행용 --> 
-	<jdbc:embedded-database id="dataSource" type="HSQL">
-		<jdbc:script location= "classpath:/db/sampledb.sql"/>
-	</jdbc:embedded-database>
+<!--	<jdbc:embedded-database id="dataSource" type="HSQL">-->
+<!--		<jdbc:script location= "classpath:/db/sampledb.sql"/>-->
+<!--	</jdbc:embedded-database>-->
      
      
     <!-- hsql (테스트용 메모리 DB)
@@ -35,5 +35,12 @@
         <property name="password" value="password"/>
     </bean>
     -->
-    
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.sap.db.jdbc.Driver"></property>
+		<property name="url" value="jdbc:sap://2ec0a886-207d-4c67-bde0-bbec20c27977.hana.prod-ap12.hanacloud.ondemand.com:443?encrypt=true&amp;validateCertificate=true&amp;currentschema=USR_5OJWT3UW5FXWW3B2731E9U4HP"></property>
+		<property name="username" value="USR_5OJWT3UW5FXWW3B2731E9U4HP"></property>
+		<property name="password" value="Rp6sS0RBeijFZSE2NopIRpdAHwf.7cdXqGEo2OHaTdovksnduteIOYKSkgnXXvjl1MopTE2sx5FCvt5TYnCBJMrgZcHjU9DDo_oRJGKhM2grLB8OJRx3vRtrrgpI736R"></property>
+	</bean>
+
 </beans>
